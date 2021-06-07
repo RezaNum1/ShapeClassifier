@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShapeClassifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCt-Dt-s59">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-ub-LDa">
+                                <rect key="frame" x="0.0" y="44" width="390" height="53"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XC-kL-cQd">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3XC-kL-cQd" firstAttribute="leading" secondItem="UnY-ub-LDa" secondAttribute="leading" id="4TR-C3-TgK"/>
+                                    <constraint firstAttribute="height" constant="53" id="HU8-uM-C6b"/>
+                                    <constraint firstAttribute="bottom" secondItem="3XC-kL-cQd" secondAttribute="bottom" id="adN-Ua-Mpj"/>
+                                    <constraint firstAttribute="trailing" secondItem="3XC-kL-cQd" secondAttribute="trailing" id="kFQ-SQ-Y1s"/>
+                                    <constraint firstItem="3XC-kL-cQd" firstAttribute="top" secondItem="UnY-ub-LDa" secondAttribute="top" id="l8k-MZ-V1p"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mub-K0-JyU">
+                                <rect key="frame" x="268" y="742" width="58" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="camera" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeImageWithCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vIB-0U-mnR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-VU-h1O">
+                                <rect key="frame" x="66" y="742" width="57" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="picture" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I5C-Zn-BiY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.20237675334220945" green="0.26307946866543863" blue="0.37056982517242432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="UnY-ub-LDa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fbu-W2-vmX"/>
+                            <constraint firstItem="UnY-ub-LDa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i1w-Lr-tqH"/>
+                            <constraint firstItem="UnY-ub-LDa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pVR-lp-tuv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="mub-K0-JyU" id="1Xp-1R-dM5"/>
+                        <outlet property="imageView" destination="TCt-Dt-s59" id="XYg-52-oVT"/>
+                        <outlet property="photoLibraryButton" destination="hm0-VU-h1O" id="OOq-lJ-mJM"/>
+                        <outlet property="resultLabel" destination="3XC-kL-cQd" id="IPn-wI-mwa"/>
+                        <outlet property="resultView" destination="UnY-ub-LDa" id="eSN-wn-Ssg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="130.09478672985782"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="60" height="60"/>
+        <image name="picture" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
